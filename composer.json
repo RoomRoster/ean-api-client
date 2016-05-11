@@ -13,7 +13,7 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/zamnuts/ean-api-client.git"
+            "url": "https://github.com/RoomRoster/ean-api-client.git"
         }
     ],
     "minimum-stability": "stable",
