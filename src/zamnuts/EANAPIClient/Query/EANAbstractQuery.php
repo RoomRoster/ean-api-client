@@ -88,7 +88,8 @@ abstract class EANAbstractQuery extends ObjectBase {
 	 */
 	protected $curl;
 		
-	public function __construct() {
+	public function __construct()
+	{
 		$this->xmlRequest = new SimpleXMLElement('<'.static::$ROOT.' />');
 	}
 	
@@ -104,7 +105,8 @@ abstract class EANAbstractQuery extends ObjectBase {
 	 * Typically used to prepare the class state with the `xmlResult` object. 
 	 * @return void
 	 */
-	protected function prepareResponse() {
+	protected function prepareResponse()
+	{
 		if ( isset($this->response) ) {
 			return;
 		}
@@ -117,7 +119,8 @@ abstract class EANAbstractQuery extends ObjectBase {
 	/**
 	 * @return boolean
 	 */
-	public function execute() {
+	public function execute()
+	{
 		$this->curl = new Curl();
 		$this->curl->setOpt(CURLOPT_ENCODING,'gzip');
 		$this->curl->setOpt(CURLOPT_SSL_VERIFYPEER,false);
@@ -176,7 +179,8 @@ abstract class EANAbstractQuery extends ObjectBase {
 	/**
 	 * @return SimpleXMLElement
 	 */
-	protected function get__xmlRequest() {
+	protected function get__xmlRequest()
+	{
 		if ( isset($this->xmlRequest) ) {
 			return clone $this->xmlRequest;
 		}
@@ -186,7 +190,8 @@ abstract class EANAbstractQuery extends ObjectBase {
 	/**
 	 * @return SimpleXMLElement
 	 */
-	protected function get__xmlResponse() {
+	protected function get__xmlResponse()
+	{
 		if ( isset($this->xmlResponse) ) {
 			return clone $this->xmlResponse;
 		}
@@ -197,34 +202,74 @@ abstract class EANAbstractQuery extends ObjectBase {
 	 * @param string $name
 	 * @param mixed $value
 	 */
-	public function setParam($name,$value) {
+	public function setParam($name, $value)
+	{
 		$this->params[$name] = $value;
 	}
 	
 	/**
 	 * Returns null if not found, otherwise the value.
+	 *
 	 * @param string $name
 	 * @return mixed
 	 */
-	public function getParam($name) {
-		if ( isset($this->params[$name]) ) {
+	public function getParam($name)
+	{
+		if ( ! isset($this->params[$name]) ) {
 			return null;
 		}
 		return $this->params[$name];
 	}
-	
+
+	/**
+	 * Set locale for the request
+	 *
+	 * @param $value
+     */
+	public function set__locale($value)
+	{
+		$this->setParam('locale', $value);
+	}
+
+	/**
+	 * Get locale for the request
+     */
+	public function get__locale()
+	{
+		$this->getParam('locale');
+	}
+
+	/**
+	 * Set locale for the request
+	 *
+	 * @param $value
+	 */
+	public function set__currencyCode($value)
+	{
+		$this->setParam('currencyCode', $value);
+	}
+
+	/**
+	 * Get locale for the request
+	 */
+	public function get__currencyCode()
+	{
+		$this->getParam('currencyCode');
+	}
+
 	/**
 	 * @return mixed[]
 	 */
-	protected function get__params() {
+	protected function get__params()
+	{
 		return $this->params;
 	}
-	
+
 	/**
 	 * @return Exception
 	 */
-	protected function get__lastError() {
+	protected function get__lastError()
+	{
 		return $this->lastError;
 	}
-	
 }

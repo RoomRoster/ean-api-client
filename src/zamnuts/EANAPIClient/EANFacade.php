@@ -60,12 +60,10 @@ class EANFacade extends ObjectBase {
 	 * @return boolean
 	 */
 	public function query(EANAbstractQuery $query) {
-		$query->setParam('apiKey',$this->account->apiKey);
-		$query->setParam('sig',$this->account->generateSignature());
-		$query->setParam('cid',$this->account->cid);
-		$query->setParam('minorRev',$query::MINOR_REVISION);
-		$query->setParam('locale',$this->locale->locale);
-		$query->setParam('currencyCode',$this->locale->currency);
+		$query->setParam('apiKey', $this->account->apiKey);
+		$query->setParam('sig', $this->account->generateSignature());
+		$query->setParam('cid', $this->account->cid);
+		$query->setParam('minorRev', $query::MINOR_REVISION);
 		$query->setParam('customerSessionId', $this->customer->customerSessionId);
 		$query->setParam('customerIpAddress', $this->customer->customerIpAddress);
 		$query->setParam('customerUserAgent', $this->customer->customerUserAgent);
