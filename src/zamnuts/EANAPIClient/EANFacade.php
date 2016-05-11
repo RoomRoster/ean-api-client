@@ -64,6 +64,7 @@ class EANFacade extends ObjectBase {
 		$query->setParam('sig', $this->account->generateSignature());
 		$query->setParam('cid', $this->account->cid);
 		$query->setParam('minorRev', $query::MINOR_REVISION);
+		$query->setParam('locale', $this->locale->locale);
 		$query->setParam('customerSessionId', $this->customer->customerSessionId);
 		$query->setParam('customerIpAddress', $this->customer->customerIpAddress);
 		$query->setParam('customerUserAgent', $this->customer->customerUserAgent);

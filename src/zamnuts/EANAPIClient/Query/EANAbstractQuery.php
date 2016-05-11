@@ -225,24 +225,6 @@ abstract class EANAbstractQuery extends ObjectBase {
 	 * Set locale for the request
 	 *
 	 * @param $value
-     */
-	public function set__locale($value)
-	{
-		$this->setParam('locale', $value);
-	}
-
-	/**
-	 * Get locale for the request
-     */
-	public function get__locale()
-	{
-		$this->getParam('locale');
-	}
-
-	/**
-	 * Set locale for the request
-	 *
-	 * @param $value
 	 */
 	public function set__currencyCode($value)
 	{
