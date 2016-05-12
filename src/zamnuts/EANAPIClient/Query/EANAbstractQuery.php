@@ -32,7 +32,7 @@ abstract class EANAbstractQuery extends ObjectBase {
 	/**
 	 * @var string EAN's hotel endpoint URI
 	 */
-	const ENDPOINT = 'https://api.eancdn.com/ean-services/rs/hotel/';
+	const ENDPOINT = 'api.ean.com/ean-services/rs/hotel/';
 	
 	/**
 	 * EAN's api method to use.
@@ -181,12 +181,13 @@ abstract class EANAbstractQuery extends ObjectBase {
 	 */
 	private function processUrl()
 	{
-		$url = static::ENDPOINT[0];
 		if (static::$API_METHOD == 'res') {
-			$url .= 'book.';
+			$url = 'https://book.';
+		}else {
+			$url = 'http://';
 		}
 
-		return $url . rtrim(static::ENDPOINT[1], '/') . '/' . static::ENDPOINT_VERSION . '/' . static::$API_METHOD;
+		return $url . rtrim(static::ENDPOINT, '/') . '/' . static::ENDPOINT_VERSION . '/' . static::$API_METHOD;
 	}
 
 	/**
