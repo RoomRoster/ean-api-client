@@ -134,7 +134,7 @@ abstract class EANAbstractQuery extends ObjectBase {
 			$this->lastError = new Exception('API method is not defined.');
 			return false;
 		}
-		$url = rtrim(static::ENDPOINT,'/').'/'.static::ENDPOINT_VERSION.'/'.static::$API_METHOD;
+		$url = $this->processUrl();
 		$data = array();
 		if ( static::$HTTP_METHOD === EANFacade::HTTP_METHOD_POST ) {
 			$data['xml'] = XMLUtils::SXEasXML($this->xmlRequest);
@@ -175,7 +175,20 @@ abstract class EANAbstractQuery extends ObjectBase {
 		$this->prepareResponse();
 		return true;
 	}
-	
+
+	/**
+	 * Process the URL
+	 */
+	private function processUrl()
+	{
+		$url = static::ENDPOINT[0];
+		if (static::$API_METHOD == 'res') {
+			$url .= 'book.';
+		}
+
+		return $url . rtrim(static::ENDPOINT[1], '/') . '/' . static::ENDPOINT_VERSION . '/' . static::$API_METHOD;
+	}
+
 	/**
 	 * @return SimpleXMLElement
 	 */
