@@ -158,7 +158,7 @@ abstract class EANAbstractQuery extends ObjectBase {
 			return false;
 		}
 		if ( $this->curl->error ) {
-			$this->lastError = new Exception($this->curl->errorMessage);
+			$this->lastError = new Exception($this->curl->errorMessage, $this->curl->curlErrorCode);
 			return false;
 		}
 		try {
