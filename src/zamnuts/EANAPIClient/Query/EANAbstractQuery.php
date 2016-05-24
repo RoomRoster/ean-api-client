@@ -122,6 +122,7 @@ abstract class EANAbstractQuery extends ObjectBase {
 	public function execute()
 	{
 		$this->curl = new Curl();
+		$this->curl->setOpt(CURLOPT_TIMEOUT, 60);
 		$this->curl->setOpt(CURLOPT_ENCODING,'gzip');
 		$this->curl->setOpt(CURLOPT_SSL_VERIFYPEER,false);
 		$this->curl->setOpt(CURLOPT_HTTPHEADER,array('Accept: application/xml'));
