@@ -250,9 +250,11 @@ class EANRoom extends EANAbstractSupportModel implements IEANSupportModel {
 			$this->set__adultCount((int) $xml->numberOfAdults);
 		}
 		if ( isset($xml->childAges) ) {
-			$children = explode(',',$xml->childAges);
-			foreach ( $children as $child ) {
-				$this->addChild($child);
+			foreach ($xml->childAges as $childAge) {
+				$children = explode(',', $childAge);
+				foreach ( $children as $child ) {
+					$this->addChild($child);
+				}
 			}
 		}
 		if ( isset($xml->numberOfChildren) ) {
