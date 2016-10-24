@@ -60,7 +60,12 @@ class EANResponseHotelList extends EANAbstractSupportModel implements IEANRespon
 	 * @var EANError
 	 */
 	protected $error;
-	
+
+    /**
+     * @var EANLocationInfos
+     */
+    protected $locations;
+
 	/**
 	 * @var string[]
 	 */
@@ -105,6 +110,14 @@ class EANResponseHotelList extends EANAbstractSupportModel implements IEANRespon
 		}
 		return null;
 	}
+	
+    protected function get__locations()
+    {
+        if ( isset($this->locations) ) {
+            return clone $this->locations;
+        }
+        return null;
+    }
 	
 	/**
 	 * TODO: get__xml
