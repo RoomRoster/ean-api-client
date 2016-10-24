@@ -71,7 +71,8 @@ class EANResponseHotelList extends EANAbstractSupportModel implements IEANRespon
 		'cacheKey' => 'string',
 		'cacheLocation' => 'string',
 		'hotelList' => 'zamnuts\\EANAPIClient\\Common\\SupportModels\\EANHotelListSummaries',
-		'error' => 'zamnuts\\EANAPIClient\\Common\\SupportModels\\EANError'
+		'error' => 'zamnuts\\EANAPIClient\\Common\\SupportModels\\EANError',
+		'locations' => 'zamnuts\\EANAPIClient\\Common\\SupportModels\\EANLocationInfos'
 	);
 	
 	/**
