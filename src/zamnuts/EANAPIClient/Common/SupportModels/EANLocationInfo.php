@@ -30,72 +30,72 @@ class EANLocationInfo extends EANAbstractSupportModel implements IEANSupportMode
     /**
      * @var string
      */
-    protected $destinationId;
+    public $destinationId;
 
     /**
      * @var boolean
      */
-    protected $active;
+    public $active;
 
     /**
      * @var int
      */
-    protected $type;
+    public $type;
 
     /**
      * @var string
      */
-    protected $city;
+    public $city;
 
     /**
      * @var string
      */
-    protected $stateProvinceCode;
+    public $stateProvinceCode;
 
     /**
      * @var string
      */
-    protected $countryCode;
+    public $countryCode;
 
     /**
      * @var string
      */
-    protected $countryName;
+    public $countryName;
 
     /**
      * @var string
      */
-    protected $code;
+    public $code;
 
     /**
      * @var int
      */
-    protected $geoAccuracy;
+    public $geoAccuracy;
 
     /**
      * @var boolean
      */
-    protected $locationInDestination;
+    public $locationInDestination;
 
     /**
      * @var float
      */
-    protected $latitude;
+    public $latitude;
 
     /**
      * @var float
      */
-    protected $longitude;
+    public $longitude;
 
     /**
      * @var float
      */
-    protected $refLocationMileage;
+    public $refLocationMileage;
 
     /**
      * @var int
      */
-    protected $activePropertyCount;
+    public $activePropertyCount;
 
 	public static $propertyMap = array(
         'destinationId' => 'string',
