@@ -17,7 +17,18 @@ class EANHLSearchDestinationId extends ObjectBase implements IEANHLSearch {
 	 * @var string
 	 */
 	protected $destinationId;
-	
+
+    /**
+     * Optional. Requires city and countryCode parameters to be defined.
+     * @var string
+     */
+    public $propertyName;
+
+    protected static $propertyMap = array(
+        'destinationId' => 'string',
+        'propertyName' => 'string',
+    );
+
 	/**
 	 * @param int $destinationId
 	 */
@@ -57,9 +68,13 @@ class EANHLSearchDestinationId extends ObjectBase implements IEANHLSearch {
 	 * @see \zamnuts\EANAPIClient\Query\HotelListSearch\IEANHLSearch::renderPreparedArray()
 	 */
 	public function renderPreparedArray() {
-		return array(
-			'destinationId' => isset($this->destinationId)?$this->destinationId:''
-		);
+        $array = array();
+        foreach ( self::$propertyMap as $key => $type ) {
+            if ( isset($this->$key) ) {
+                $array[$key] = $this->$key;
+            }
+        }
+        return $array;
 	}
 	
 }
