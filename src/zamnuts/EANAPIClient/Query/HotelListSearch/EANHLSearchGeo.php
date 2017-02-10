@@ -45,12 +45,19 @@ class EANHLSearchGeo extends ObjectBase implements IEANHLSearch {
 	 * @var string
 	 */
 	protected $searchRadiusUnit;
+
+    /**
+     * Optional. Requires city and countryCode parameters to be defined.
+     * @var string
+     */
+    public $propertyName;
 	
 	protected static $propertyMap = array(
 		'latitude' => 'float',
 		'longitude' => 'float',
 		'searchRadius' => 'int',
-		'searchRadiusUnit' => 'string'
+		'searchRadiusUnit' => 'string',
+        'propertyName' => 'string'
 	);
 	
 	/**
