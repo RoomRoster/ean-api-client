@@ -88,11 +88,10 @@ class EANHLSearchGeo extends ObjectBase implements IEANHLSearch {
 	}
 	
 	/**
-	 * Clamp to either -90.0 or +90.0. 
 	 * @param float $value
 	 */
 	protected function set__latitude($value) {
-		$this->latitude = MathUtils::normalizeLatitude($value);
+		$this->latitude = $value;
 	}
 	
 	/**
@@ -103,11 +102,10 @@ class EANHLSearchGeo extends ObjectBase implements IEANHLSearch {
 	}
 	
 	/**
-	 * Normalize between -180.0 and +180.0. 
 	 * @param float $value
 	 */
 	protected function set__longitude($value) {
-		$this->longitude = MathUtils::normalizeLongitude($value);
+		$this->longitude = $value;
 	}
 	
 	/**
