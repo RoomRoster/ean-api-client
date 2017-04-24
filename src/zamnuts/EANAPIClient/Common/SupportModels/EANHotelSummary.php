@@ -86,7 +86,7 @@ class EANHotelSummary extends EANAbstractSupportModel implements IEANSupportMode
 	/**
 	 * @var string
 	 */
-	protected $name;
+	public $name;
 	
 	/**
 	 * @var string
@@ -161,7 +161,7 @@ class EANHotelSummary extends EANAbstractSupportModel implements IEANSupportMode
 	/**
 	 * @var string
 	 */
-	protected $locationDescription;
+	public $locationDescription;
 	
 	/**
 	 * @var string
@@ -211,7 +211,7 @@ class EANHotelSummary extends EANAbstractSupportModel implements IEANSupportMode
 	/**
 	 * @var string
 	 */
-	protected $thumbNailUrl;
+	public $thumbNailUrl;
 	
 	/**
 	 * @var string
