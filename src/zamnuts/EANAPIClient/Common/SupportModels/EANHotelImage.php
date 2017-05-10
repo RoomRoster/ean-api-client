@@ -30,7 +30,7 @@ class EANHotelImage extends EANAbstractSupportModel implements IEANSupportModel 
 	/**
 	 * @var string
 	 */
-	protected $name;
+    public $name;
 	
 	/**
 	 * @var int
@@ -45,17 +45,17 @@ class EANHotelImage extends EANAbstractSupportModel implements IEANSupportModel 
 	/**
 	 * @var string
 	 */
-	protected $caption;
+    public $caption;
 	
 	/**
 	 * @var string
 	 */
-	protected $url;
+    public $url;
 	
 	/**
 	 * @var string
 	 */
-	protected $thumbnailUrl;
+    public $thumbnailUrl;
 	
 	/**
 	 * @var int
