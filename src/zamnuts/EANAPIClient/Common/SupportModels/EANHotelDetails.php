@@ -62,112 +62,112 @@ class EANHotelDetails extends EANAbstractSupportModel implements IEANSupportMode
 	/**
 	 * @var string
 	 */
-	protected $checkInTime;
+    public $checkInTime;
 	
 	/**
 	 * @var string
 	 */
-	protected $checkOutTime;
+    public $checkOutTime;
 	
 	/**
 	 * @var string
 	 */
-	protected $propertyInformation;
+    public $propertyInformation;
 
 	/**
 	 * @var string
 	 */
-	protected $areaInformation;
+    public $areaInformation;
 	
 	/**
 	 * @var string
 	 */
-	protected $propertyDescription;
+    public $propertyDescription;
 	
 	/**
 	 * @var string
 	 */
-	protected $drivingDirections;
+    public $drivingDirections;
 	
 	/**
 	 * @var string
 	 */
-	protected $checkInInstructions;
+    public $checkInInstructions;
 	
 	/**
 	 * @var string
 	 */
-	protected $roomFeesDescription;
+    public $roomFeesDescription;
 	
 	/**
 	 * @var string
 	 */
-	protected $mandatoryFeesDescription;
+    public $mandatoryFeesDescription;
 	
 	/**
 	 * @var string
 	 */
-	protected $locationDescription;
+    public $locationDescription;
 	
 	/**
 	 * @var string
 	 */
-	protected $diningDescription;
+    public $diningDescription;
 	
 	/**
 	 * @var string
 	 */
-	protected $amenitiesDescription;
+    public $amenitiesDescription;
 	
 	/**
 	 * @var string
 	 */
-	protected $businessAmenitiesDescription;
+    public $businessAmenitiesDescription;
 	
 	/**
 	 * @var string
 	 */
-	protected $roomDetailDescription;
+    public $roomDetailDescription;
 	
 	/**
 	 * @var string
 	 */
-	protected $extraPersonCharge;
+    public $extraPersonCharge;
 	
 	/**
 	 * @var string
 	 */
-	protected $guaranteePolicy;
+    public $guaranteePolicy;
 	
 	/**
 	 * @var string
 	 */
-	protected $depositPolicy;
+    public $depositPolicy;
 	
 	/**
 	 * @var string
 	 */
-	protected $guaranteeCreditCardsAccepted;
+    public $guaranteeCreditCardsAccepted;
 	
 	/**
 	 * @var string
 	 */
-	protected $depositCreditCardsAccepted;
+    public $depositCreditCardsAccepted;
 	
 	/**
 	 * @var string
 	 */
-	protected $nationalRatingsDescription;
+    public $nationalRatingsDescription;
 	
 	/**
 	 * @var string
 	 */
-	protected $knowBeforeYouGoDescription;
+    public $knowBeforeYouGoDescription;
 	
 	/**
 	 * @var string
 	 */
-	protected $renovationsDescription;
+    public $renovationsDescription;
 	
 	/**
 	 * @var string[]
