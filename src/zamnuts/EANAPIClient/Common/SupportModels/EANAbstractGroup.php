@@ -33,7 +33,7 @@ abstract class EANAbstractGroup extends EANAbstractSupportModel {
 	/**
 	 * @var EANAbstractSupportModel[]
 	 */
-	protected $items;
+	public $items;
 	
 	/**
 	 * @param EANAbstractGroup $supportModel
