@@ -60,7 +60,7 @@ class EANRateInfo extends EANAbstractSupportModel implements IEANSupportModel {
 	/**
 	 * @var EANChargeableRateInfo
 	 */
-	protected $chargeableRateInfo;
+	public $chargeableRateInfo;
 	
 	/**
 	 * @var EANConvertedRateInfo

@@ -56,7 +56,7 @@ class EANHotelRoom extends EANAbstractSupportModel implements IEANSupportModel {
 	/**
 	 * @var string
 	 */
-	protected $rateDescription;
+	public $rateDescription;
 	
 	/**
 	 * @var string
@@ -126,7 +126,7 @@ class EANHotelRoom extends EANAbstractSupportModel implements IEANSupportModel {
 	/**
 	 * @var EANRateInfos
 	 */
-	protected $rateInfos;
+	public $rateInfos;
 		
 	/**
 	 * @var string[]
