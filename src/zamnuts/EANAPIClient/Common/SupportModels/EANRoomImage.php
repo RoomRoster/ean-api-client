@@ -22,7 +22,7 @@ class EANRoomImage extends EANAbstractSupportModel implements IEANSupportModel {
 	/**
 	 * @var string
 	 */
-	protected $url;
+	public $url;
 		
 	public static $propertyMap = array(
 		'url' => 'string'

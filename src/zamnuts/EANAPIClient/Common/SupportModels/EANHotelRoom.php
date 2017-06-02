@@ -116,7 +116,7 @@ class EANHotelRoom extends EANAbstractSupportModel implements IEANSupportModel {
 	/**
 	 * @var EANRoomImages
 	 */
-	protected $images;
+	public $images;
 	
 	/**
 	 * @var EANRoomType
