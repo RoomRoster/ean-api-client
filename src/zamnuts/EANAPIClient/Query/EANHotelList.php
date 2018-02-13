@@ -725,7 +725,7 @@ class EANHotelList extends EANAbstractQuery {
 	protected function get__propertyCategoryArray() {
 		$propertyCategoryList = $this->propertyCategoryList;
 		if ( !count($propertyCategoryList) ) {
-			$this->propertyCategoryList = range(1,7);
+			$this->propertyCategoryList = range(1,6);
 		}
 		return $this->propertyCategoryList;
 	}
