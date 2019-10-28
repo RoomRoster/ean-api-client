@@ -22,7 +22,7 @@ abstract class EANAbstractQuery extends ObjectBase {
 	/**
 	 * @var int EAN's minorRev this implementation is compatible with.
 	 */
-	const MINOR_REVISION = 27;
+	const MINOR_REVISION = 30;
 	
 	/**
 	 * @var string EAN's endpoint version
